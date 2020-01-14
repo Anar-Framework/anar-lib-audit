@@ -1,7 +1,7 @@
 package af.gov.anar.lib.audit.exception.dataaccess;
 
 
-import af.asr.auditmanager.exception.common.BaseUncheckedException;
+import af.gov.anar.lib.audit.exception.common.BaseUncheckedException;
 
 /**
  * Custom class for DataAccessLayerException

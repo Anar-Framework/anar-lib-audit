@@ -7,21 +7,40 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 /**
  * The Audit Entity class with required fields to be captured and recorded
  */
 @Entity
-@Table(name = "app_audit_log", schema = "audit")
+@Table(name = "audit_log", schema = "audit")
 @Data
-@EqualsAndHashCode(callSuper = true)
-@NoArgsConstructor
+@EqualsAndHashCode
 @AllArgsConstructor
-public class Audit extends BaseAudit {
+public class Audit  {
+
+	/**
+	 * Field for immutable universally unique identifier (UUID)
+	 */
+	@Id
+	@Column(name = "log_id", nullable = false, updatable = false)
+	private String uuid;
+
+	@Column(name = "log_dtimes", nullable = false, updatable = false)
+	private LocalDateTime createdAt;
+
+	/**
+	 * Constructor to initialize {@link BaseAudit} with uuid and timestamp
+	 */
+	public Audit() {
+		uuid = UUID.randomUUID().toString();
+		createdAt = LocalDateTime.now();
+	}
 
 	@NotNull
 	@Size(min = 1, max = 64)
