@@ -1,4 +1,4 @@
-package af.gov.anar.lib.audit.exception.auditmanager.spi;
+package af.gov.anar.lib.audit.handler;
 
 /**
  * Interface with function to write AuditRequest

@@ -1,10 +1,9 @@
-package af.gov.anar.lib.audit.impl;
+package af.gov.anar.lib.audit.handler;
 
-import af.asr.auditmanager.entity.Audit;
-import af.asr.auditmanager.exception.auditmanager.spi.AuditHandler;
-import af.asr.auditmanager.repository.AuditRepository;
-import af.asr.auditmanager.request.AuditRequestDto;
-import af.asr.auditmanager.util.AuditUtils;
+import af.gov.anar.lib.audit.data.Audit;
+import af.gov.anar.lib.audit.data.AuditRepository;
+import af.gov.anar.lib.audit.request.AuditRequestDto;
+import af.gov.anar.lib.audit.util.AuditUtils;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

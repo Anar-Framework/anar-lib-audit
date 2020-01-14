@@ -1,7 +1,7 @@
 
-package af.gov.anar.lib.audit.repository;
+package af.gov.anar.lib.audit.data;
 
-import af.gov.anar.lib.audit.entity.Audit;
+import af.gov.anar.lib.audit.data.Audit;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

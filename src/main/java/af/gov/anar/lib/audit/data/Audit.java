@@ -1,9 +1,8 @@
-package af.gov.anar.lib.audit.entity;
+package af.gov.anar.lib.audit.data;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
