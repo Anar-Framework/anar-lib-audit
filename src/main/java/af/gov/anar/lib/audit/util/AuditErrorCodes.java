@@ -1,4 +1,4 @@
-package af.gov.anar.lib.audit.util.constant;
+package af.gov.anar.lib.audit.util;
 
 /**
  * Constants for Audit Manager

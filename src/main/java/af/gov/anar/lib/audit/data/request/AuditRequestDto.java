@@ -1,4 +1,4 @@
-package af.gov.anar.lib.audit.request;
+package af.gov.anar.lib.audit.data.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

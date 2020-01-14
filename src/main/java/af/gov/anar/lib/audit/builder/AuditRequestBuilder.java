@@ -1,6 +1,6 @@
 package af.gov.anar.lib.audit.builder;
 
-import af.asr.auditmanager.request.AuditRequestDto;
+import af.gov.anar.lib.audit.data.request.AuditRequestDto;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 public class AuditRequestBuilder {
 
 	/**
-	 * The {@link af.asr.auditmanager.request.AuditRequestDto} instance
+	 * The {@link AuditRequestDto} instance
 	 */
 	private AuditRequestDto auditRequest = null;
 
