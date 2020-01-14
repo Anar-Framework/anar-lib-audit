@@ -2,7 +2,7 @@ package af.gov.anar.lib.audit.util;
 
 
 import af.gov.anar.lib.audit.exception.auditmanager.exception.AuditManagerException;
-import af.gov.anar.lib.audit.data.request.AuditRequestDto;
+import af.gov.anar.lib.audit.request.AuditRequestDto;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;

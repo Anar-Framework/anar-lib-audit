@@ -1,6 +1,6 @@
 package af.gov.anar.lib.audit.builder;
 
-import af.gov.anar.lib.audit.data.request.AuditRequestDto;
+import af.gov.anar.lib.audit.request.AuditRequestDto;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;

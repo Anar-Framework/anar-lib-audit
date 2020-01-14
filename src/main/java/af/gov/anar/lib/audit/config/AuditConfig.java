@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @EntityScan("af.gov.anar.*")
-@ComponentScan("af.gov.anar.*")
+@ComponentScan(basePackages = {"af.gov.anar.*"})
 public class AuditConfig {
 
 	/**
