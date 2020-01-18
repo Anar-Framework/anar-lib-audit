@@ -1,4 +1,4 @@
-package af.gov.anar.lib.audit.exception.auditmanager.exception;
+package af.gov.anar.lib.audit.exception.auditmanager;
 
 
 import af.gov.anar.lib.audit.exception.common.BaseUncheckedException;

@@ -1,5 +1,8 @@
 package af.gov.anar.lib.audit.handler;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 /**
  * Interface with function to write AuditRequest
  */

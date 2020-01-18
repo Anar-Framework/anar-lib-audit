@@ -1,8 +1,10 @@
 package af.gov.anar.lib.audit.util;
 
 
-import af.gov.anar.lib.audit.exception.auditmanager.exception.AuditManagerException;
-import af.gov.anar.lib.audit.request.AuditRequestDto;
+import af.gov.anar.lib.audit.exception.auditmanager.AuditManagerException;
+import af.gov.anar.lib.audit.data.AuditRequestDto;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
@@ -14,14 +16,8 @@ import java.util.Set;
  * Utility class for Audit Manager
  *
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class AuditUtils {
-
-	/**
-	 * Private constructor for AuditUtils
-	 */
-	private AuditUtils() {
-
-	}
 
 	/**
 	 * Function to validate {@link AuditRequestDto}

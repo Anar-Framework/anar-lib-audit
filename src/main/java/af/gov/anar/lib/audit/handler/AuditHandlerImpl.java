@@ -2,10 +2,11 @@ package af.gov.anar.lib.audit.handler;
 
 import af.gov.anar.lib.audit.data.Audit;
 import af.gov.anar.lib.audit.data.AuditRepository;
-import af.gov.anar.lib.audit.request.AuditRequestDto;
+import af.gov.anar.lib.audit.data.AuditRequestDto;
 import af.gov.anar.lib.audit.util.AuditUtils;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 
 /**

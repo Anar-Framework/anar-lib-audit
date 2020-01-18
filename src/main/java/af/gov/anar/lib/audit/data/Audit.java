@@ -1,8 +1,10 @@
 package af.gov.anar.lib.audit.data;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.DynamicUpdate;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -16,12 +18,14 @@ import java.util.UUID;
 /**
  * The Audit Entity class with required fields to be captured and recorded
  */
-@Entity
-@Table(name = "audit_log", schema = "audit")
-@Data
+@Entity(name = "Audit")
+@Table(name = "audit_log")
 @EqualsAndHashCode
 @AllArgsConstructor
-public class Audit  {
+@DynamicUpdate
+@Getter
+@Setter
+public class Audit {
 
 	/**
 	 * Field for immutable universally unique identifier (UUID)
@@ -30,15 +34,20 @@ public class Audit  {
 	@Column(name = "log_id", nullable = false, updatable = false)
 	private String uuid;
 
-	@Column(name = "log_dtimes", nullable = false, updatable = false)
+
+	@Column(name = "log_dtimes")
+	@CreationTimestamp
 	private LocalDateTime createdAt;
 
+	@Column(name = "updated_at")
+	@UpdateTimestamp
+	private LocalDateTime updatedAt;
+
 	/**
-	 * Constructor to initialize {@link BaseAudit} with uuid and timestamp
+	 * Constructor to initialize {@link } with uuid and timestamp
 	 */
 	public Audit() {
 		uuid = UUID.randomUUID().toString();
-		createdAt = LocalDateTime.now();
 	}
 
 	@NotNull
@@ -112,7 +121,6 @@ public class Audit  {
 	@Column(name = "module_id", updatable = false, length = 64)
 	private String moduleId;
 
-	@Size(max = 2048)
-	@Column(name = "log_desc", updatable = false, length = 2048)
+	@Column(columnDefinition="TEXT", name = "log_desc", updatable = false)
 	private String description;
 }
