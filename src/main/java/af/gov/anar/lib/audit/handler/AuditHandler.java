@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 /**
  * Interface with function to write AuditRequest
  */
+@Component
 public interface AuditHandler<T> {
 
 	/**

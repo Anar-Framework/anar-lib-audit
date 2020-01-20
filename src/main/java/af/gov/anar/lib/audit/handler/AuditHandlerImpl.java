@@ -32,8 +32,7 @@ public class AuditHandlerImpl implements AuditHandler<AuditRequestDto> {
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * io.mosip.kernel.core.audit.handler.AuditHandler#writeAudit(io.mosip.kernel.
-	 * core.audit.dto.AuditRequest)
+	 * AuditHandler#writeAudit(AuditRequest)
 	 */
 	@Override
 	public boolean addAudit(AuditRequestDto auditRequest) {

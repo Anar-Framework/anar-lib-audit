@@ -1,7 +1,7 @@
 package af.gov.anar.lib.audit.exception.auditmanager;
 
 
-import af.gov.anar.lib.audit.exception.common.BaseUncheckedException;
+import af.gov.anar.lang.infrastructure.exception.common.BaseUncheckedException;
 
 /**
  * Custom Exception Class in case of Handler Exception in Audit manager

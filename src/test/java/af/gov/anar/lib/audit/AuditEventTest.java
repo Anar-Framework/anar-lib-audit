@@ -6,6 +6,7 @@ import af.gov.anar.lib.audit.data.Audit;
 import af.gov.anar.lib.audit.data.AuditRequestDto;
 import af.gov.anar.lib.audit.data.AuditRepository;
 import af.gov.anar.lib.audit.exception.auditmanager.AuditManagerException;
+import af.gov.anar.lib.audit.handler.AuditHandler;
 import af.gov.anar.lib.audit.handler.AuditHandlerImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,7 +28,7 @@ import static org.junit.Assert.assertThat;
 public class AuditEventTest {
 
 	@Autowired
-	private AuditHandlerImpl auditHandlerImpl;
+	private AuditHandler<AuditRequestDto> auditHandler;
 
 	@MockBean
 	private AuditRepository auditRepository;
@@ -46,9 +47,9 @@ public class AuditEventTest {
 				.setModuleName("moduleName").setSessionUserId("sessionUserId").setSessionUserName("sessionUserName");
 
 		AuditRequestDto auditRequest = auditRequestBuilder.build();
-		auditHandlerImpl.addAudit(auditRequest);
+		auditHandler.addAudit(auditRequest);
 
-		assertThat(auditHandlerImpl.addAudit(auditRequestBuilder.build()), is(true));
+		assertThat(auditHandler.addAudit(auditRequestBuilder.build()), is(true));
 	}
 
 	@Test(expected = AuditManagerException.class)
@@ -65,7 +66,7 @@ public class AuditEventTest {
 				.setSessionUserName("sessionUserName");
 
 		AuditRequestDto auditRequest = auditRequestBuilder.build();
-		auditHandlerImpl.addAudit(auditRequest);
+		auditHandler.addAudit(auditRequest);
 
 	}
 
